@@ -1,4 +1,5 @@
 import { createSignal, Show, splitProps, onCleanup, createEffect } from 'solid-js';
+import  '../../../assets/fonts/style.css';
 import styles from '../../../assets/index.css';
 import { BubbleButton } from './BubbleButton';
 import { BubbleParams } from '../types';

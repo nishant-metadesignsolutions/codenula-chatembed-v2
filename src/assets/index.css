@@ -2,10 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+/* dubai font */
+@font-face {
+  font-family: 'Dubai Regular';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Dubai Regular'),
+    url('Dubai-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Dubai Light';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Dubai Light'),
+    url('Dubai-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Dubai Medium';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Dubai Medium'),
+    url('Dubai-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Dubai Bold';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Dubai Bold'),
+    url('Dubai-Bold.woff') format('woff');
+}
+
 :host {
   --chatbot-container-bg-image: none;
   --chatbot-container-bg-color: transparent;
-  --chatbot-container-font-family: 'Open Sans';
+  --chatbot-container-font-family: 'Dubai Regular, Open Sans';
 
   --chatbot-button-bg-color: #0042da;
   --chatbot-button-color: #ffffff;
@@ -164,6 +201,7 @@ textarea {
   background-image: var(--chatbot-container-bg-image);
   background-color: var(--chatbot-container-bg-color);
   font-family:
+    'Dubai Regular',
     'Open Sans',
     -apple-system,
     BlinkMacSystemFont,
@@ -457,18 +495,20 @@ textarea {
     max-width: unset !important;
     max-height: unset !important;
     height: 100% !important;
-    overflow: auto; 
+    overflow: auto;
     overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
-    div[part='button'], div[class='flex flex-row items-center w-full h-[50px] absolute top-0 left-0 z-10'], .chatbot-container, .rounded-lg {
+  div[part='button'],
+  div[class='flex flex-row items-center w-full h-[50px] absolute top-0 left-0 z-10'],
+  .chatbot-container,
+  .rounded-lg {
     border-radius: 0px !important;
   }
 
-button {
-  cursor: default !important;
-}
-
+  button {
+    cursor: default !important;
+  }
 }
 .tooltip {
   position: fixed;

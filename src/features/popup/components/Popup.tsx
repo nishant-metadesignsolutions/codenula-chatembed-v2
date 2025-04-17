@@ -1,3 +1,4 @@
+import '../../../assets/fonts/style.css';
 import styles from '../../../assets/index.css';
 import { createSignal, Show, splitProps, createEffect, onMount } from 'solid-js';
 import { isNotDefined } from '@/utils/index';

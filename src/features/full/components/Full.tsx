@@ -1,3 +1,4 @@
+import '../../../assets/fonts/style.css';
 import styles from '../../../assets/index.css';
 import { Bot, BotProps } from '@/components/Bot';
 import { BubbleParams } from '@/features/bubble/types';

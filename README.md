@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+
 # codenula-chatembed-v2
+
 =======
+
 <!-- markdownlint-disable MD030 -->
 
 # Codenula Embed
@@ -354,4 +357,5 @@ yarn dev
 ## License
 
 Source code in this repository is made available under the [MIT License](https://github.com/codenulaAI/codenula/blob/master/LICENSE.md).
->>>>>>> upstream/main
+
+> > > > > > > upstream/main
