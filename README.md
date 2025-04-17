@@ -3,11 +3,11 @@
 =======
 <!-- markdownlint-disable MD030 -->
 
-# Flowise Embed
+# Codenula Embed
 
-Javascript library to display flowise chatbot on your website
+Javascript library to display codenula chatbot on your website
 
-![Flowise](https://github.com/FlowiseAI/FlowiseChatEmbed/blob/main/images/ChatEmbed.gif?raw=true)
+![codenula](https://github.com/codenulaAI/codenulaChatEmbed/blob/main/images/ChatEmbed.gif?raw=true)
 
 Install:
 
@@ -21,15 +21,15 @@ Dev:
 yarn dev
 ```
 
-A development server will be running on http://localhost:5678 automatically. Update `public/index.html` to connect directly to Flowise:
+A development server will be running on http://localhost:5678 automatically. Update `public/index.html` to connect directly to codenula:
 
 ```html
 <!-- public/index.html -->
 <script type="module">
   import Chatbot from 'https://localhost:5678/web.js'; // Change to from './web.js' to 'https://localhost:5678/web.js'
   Chatbot.init({
-    chatflowid: '91e9c803-5169-4db9-8207-3c0915d71c5f', // Add your Flowise chatflowid
-    apiHost: 'https://your-flowise-instance.com', // Add your Flowise apiHost
+    chatflowid: '91e9c803-5169-4db9-8207-3c0915d71c5f', // Add your codenula chatflowid
+    apiHost: 'https://your-codenula-instance.com', // Add your codenula apiHost
   });
 </script>
 ```
@@ -46,7 +46,7 @@ yarn build
 
 ```html
 <script type="module">
-  import Chatbot from 'https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js';
+  import Chatbot from 'https://cdn.jsdelivr.net/npm/codenula-embed/dist/web.js';
   Chatbot.init({
     chatflowid: '<chatflowid>',
     apiHost: 'http://localhost:3000',
@@ -58,13 +58,13 @@ yarn build
 
 ```html
 <script type="module">
-  import Chatbot from 'https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js';
+  import Chatbot from 'https://cdn.jsdelivr.net/npm/codenula-embed/dist/web.js';
   Chatbot.initFull({
     chatflowid: '<chatflowid>',
     apiHost: 'http://localhost:3000',
   });
 </script>
-<flowise-fullchatbot></flowise-fullchatbot>
+<codenula-fullchatbot></codenula-fullchatbot>
 ```
 
 To enable full screen, add `margin: 0` to <code>body</code> style, and confirm you don't set height and width
@@ -72,7 +72,7 @@ To enable full screen, add `margin: 0` to <code>body</code> style, and confirm y
 ```html
 <body style="margin: 0">
   <script type="module">
-    import Chatbot from 'https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js';
+    import Chatbot from 'https://cdn.jsdelivr.net/npm/codenula-embed/dist/web.js';
     Chatbot.initFull({
       chatflowid: '<chatflowid>',
       apiHost: 'http://localhost:3000',
@@ -93,7 +93,7 @@ You can also customize chatbot with different configuration
 
 ```html
 <script type="module">
-  import Chatbot from 'https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js';
+  import Chatbot from 'https://cdn.jsdelivr.net/npm/codenula-embed/dist/web.js';
   Chatbot.init({
     chatflowid: '91e9c803-5169-4db9-8207-3c0915d71c5f',
     apiHost: 'http://localhost:3000',
@@ -139,7 +139,7 @@ You can also customize chatbot with different configuration
       },
       disclaimer: {
         title: 'Disclaimer',
-        message: 'By using this chatbot, you agree to the <a target="_blank" href="https://flowiseai.com/terms">Terms & Condition</a>',
+        message: 'By using this chatbot, you agree to the <a target="_blank" href="https://codenulaai.com/terms">Terms & Condition</a>',
         textColor: 'black',
         buttonColor: '#3b82f6',
         buttonText: 'Start Chatting',
@@ -153,7 +153,7 @@ You can also customize chatbot with different configuration
       chatWindow: {
         showTitle: true,
         showAgentMessages: true,
-        title: 'Flowise Bot',
+        title: 'codenula Bot',
         titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
         titleBackgroundColor: '#3B81F6',
         titleTextColor: '#ffffff',
@@ -204,8 +204,8 @@ You can also customize chatbot with different configuration
         footer: {
           textColor: '#303235',
           text: 'Powered by',
-          company: 'Flowise',
-          companyLink: 'https://flowiseai.com',
+          company: 'codenula',
+          companyLink: 'https://codenula.com',
         },
       },
     },
@@ -215,13 +215,13 @@ You can also customize chatbot with different configuration
 
 ## (Experimental) Proxy Server Setup
 
-The Flowise Embed Proxy Server enhances the security of your chatbot implementation by acting as a protective intermediary layer. This server eliminates the need to expose sensitive Flowise instance details in your frontend code and provides several key security benefits:
+The codenula Embed Proxy Server enhances the security of your chatbot implementation by acting as a protective intermediary layer. This server eliminates the need to expose sensitive codenula instance details in your frontend code and provides several key security benefits:
 
-![Proxy Server](https://github.com/FlowiseAI/FlowiseChatEmbed/blob/main/images/proxyserver.png?raw=true)
+![Proxy Server](https://github.com/codenulaAI/codenulaChatEmbed/blob/main/images/proxyserver.png?raw=true)
 
-- **Enhanced Security**: Conceals your Flowise API host and chatflow IDs from client-side exposure
+- **Enhanced Security**: Conceals your codenula API host and chatflow IDs from client-side exposure
 - **Access Control**: Implements strict domain-based restrictions for chatbot embedding
-- **Secure Communication**: Acts as a secure gateway for all interactions between your website and Flowise instance
+- **Secure Communication**: Acts as a secure gateway for all interactions between your website and codenula instance
 - **Authentication Management**: Handles API key authentication securely on the server side, away from client exposure
 
 This proxy server can be deployed to any Node.js hosting platform.
@@ -232,14 +232,14 @@ This proxy server can be deployed to any Node.js hosting platform.
 
 ```bash
 # Copy .env.example to .env and configure required settings:
-API_HOST=https://your-flowise-instance.com
+API_HOST=https://your-codenula-instance.com
 FLOWISE_API_KEY=your-api-key
 
 # Configure your chatflows:
 # Format: [identifier]=[chatflowId],[allowedDomain1],[allowedDomain2],...
 #
 # identifier: Any name you choose (e.g., agent1, support, salesbot)
-# chatflowId: The UUID of your Flowise chatflow
+# chatflowId: The UUID of your codenula chatflow
 # allowedDomains: Comma-separated list of domains where this chat can be embedded
 #
 # Examples:
@@ -263,7 +263,7 @@ yarn start
 # - Cloud:  [Your Platform URL] (e.g., https://your-app.herokuapp.com)
 ```
 
-4. Once the proxy server is running in production, you will be able to embed your chatbots safely without exposing your Flowise API host and chatflow IDs as below:
+4. Once the proxy server is running in production, you will be able to embed your chatbots safely without exposing your codenula API host and chatflow IDs as below:
 
 ```html
 <script type="module">
@@ -327,7 +327,7 @@ For full page testing, use this configuration instead:
 
 ```html
 <!-- public/index.html -->
-<flowise-fullchatbot></flowise-fullchatbot>
+<codenula-fullchatbot></codenula-fullchatbot>
 <script type="module">
   import Chatbot from './web.js';
   Chatbot.initFull({
@@ -353,5 +353,5 @@ yarn dev
 
 ## License
 
-Source code in this repository is made available under the [MIT License](https://github.com/FlowiseAI/Flowise/blob/master/LICENSE.md).
+Source code in this repository is made available under the [MIT License](https://github.com/codenulaAI/codenula/blob/master/LICENSE.md).
 >>>>>>> upstream/main
